@@ -4,13 +4,16 @@ defineProps<{
     description?: string
     imageSrc?: string
     diaObra?: string
+    key: number
 }>()
+
 
 </script>
 
 <template>
-        <section class="functions">
+          <RouterLink to="/function/{{key}}">
             <article class="card">
+
                 <div class="imgContainer">
                     <img src="../assets/IMAGENES/{{ imageSrc }}" alt="title">
                 </div>
@@ -19,8 +22,8 @@ defineProps<{
                     <h3>{{ diaObra }}</h3>
                 </div>
             </article>
+          </RouterLink>
 
-        </section>
 </template>
 
 <style>
@@ -28,17 +31,9 @@ defineProps<{
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 
-.functions {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-}
-.functions a {
-  text-decoration: none;
-}
-.functions .card {
+
+
+.card {
   background-color: #ba1313;
   width: auto;
   height: auto;
@@ -49,7 +44,7 @@ defineProps<{
   cursor: pointer;
   /* PARA ORDENADORES */
 }
-.functions .card .imgContainer {
+.card .imgContainer {
   height: 65%;
   margin-top: 5%;
 }

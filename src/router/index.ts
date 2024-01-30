@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router"
 import AboutView from "../views/AboutView.vue"
 import HomeView from "../views/HomeView.vue"
 import FunctionsView from "../views/FunctionsView.vue"
+import FunctionDescriptionView from "../views/FunctionDescriptionView.vue"
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,6 +21,11 @@ const router = createRouter({
             path: '/functions',
             name: 'functions',
             component: FunctionsView
+        },
+        {
+            path: '/function/:id',
+            name: 'function',
+            component: FunctionDescriptionView
         }
     ]
 })

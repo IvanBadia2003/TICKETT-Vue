@@ -1,29 +1,26 @@
 <script setup lang="ts">
 defineProps<{
-    title?: string
-    description?: string
-    imageSrc?: string
-    diaObra?: string
-    key: number
-}>()
-
-
+  title?: string
+  description?: string
+  imageSrc?: string
+  diaObra?: string
+  obraId: number
+  }>()
+ 
 </script>
 
 <template>
-          <RouterLink to="/function/{{key}}">
-            <article class="card">
-
-                <div class="imgContainer">
-                    <img src="../assets/IMAGENES/{{ imageSrc }}" alt="title">
-                </div>
-                <div class="card__description">
-                    <h2>{{ title }}</h2>
-                    <h3>{{ diaObra }}</h3>
-                </div>
-            </article>
-          </RouterLink>
-
+  <RouterLink :to="'/function/' + obraId">
+    <article class="card">
+      <div class="imgContainer">
+        <img :src="'../assets/IMAGENES/' + imageSrc" alt="title">
+      </div>
+      <div class="card__description">
+        <h2>{{ title }}</h2>
+        <h3>{{ obraId }}</h3>
+      </div>
+    </article>
+  </RouterLink>
 </template>
 
 <style>

@@ -25,7 +25,8 @@ const router = createRouter({
         {
             path: '/function/:id',
             name: 'function',
-            component: FunctionDescriptionView
+            component: FunctionDescriptionView,
+            props: true,
         }
     ]
 })

@@ -12,7 +12,8 @@ defineProps<{
         <section class="functions">
             <article class="card">
                 <div class="imgContainer">
-                    <img src="../assets/IMAGENES/{{ imageSrc }}" alt="title">
+                  <img v-bind:src="`../assets/IMAGENES/${imageSrc}`" />
+
                 </div>
                 <div class="card__description">
                     <h2>{{ title }}</h2>
@@ -32,7 +33,7 @@ defineProps<{
   width: 100%;
   height: auto;
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .functions a {
@@ -40,7 +41,7 @@ defineProps<{
 }
 .functions .card {
   background-color: #ba1313;
-  width: auto;
+  width: calc(33.33% - 20px);
   height: auto;
   margin: 10px;
   flex-basis: calc(50% - 20px);

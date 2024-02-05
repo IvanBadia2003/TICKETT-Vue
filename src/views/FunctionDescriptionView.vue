@@ -1,5 +1,5 @@
   <script setup lang="ts">
-   import { obras } from '../views/FunctionsView.vue';
+   import { obras } from '../assets/server/server.js';
   
   const obtenerTituloObra = (id: string | number | string[]) => {
     // Convertir id a string o number si es un array

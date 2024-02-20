@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import Card from '../components/Card.vue';
+import CardGrid from '../components/CardGrid.vue';
 
 
 import * as obras from '../assets/server/server'; // Asegúrate de proporcionar la ruta correcta
@@ -12,7 +12,7 @@ import * as obras from '../assets/server/server'; // Asegúrate de proporcionar 
     <div class="content">
         <section class="functions">
 
-            <Card v-for="obra in obras" :obraId="obra.id" :title="obra.titulo" :description="obra.descripcion"
+            <CardGrid v-for="obra in obras" :obraId="obra.id" :title="obra.titulo" 
                 :dia-obra="obra.diaObra" :image-src="obra.imagenObra" />
         </section>
 

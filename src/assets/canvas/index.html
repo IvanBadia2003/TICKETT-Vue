@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:opsz,wght@6..12,300&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <canvas id="myCanvas" width="70" height="55" style="border:1px solid grey"></canvas>
+
+<script>
+    const c = document.getElementById("myCanvas");
+    const ctx = c.getContext("2d");
+
+    var MASK_R = new Image();
+    MASK_R.src = 'MASK_R_default.png';
+
+    var MASK_L = new Image();
+    MASK_L.src = 'MASK_L_default.png';
+
+    var TICKET = new Image();
+    TICKET.src = 'TICKET_default.png';
+
+    // Inicializa las posiciones y para las máscaras y el ticket
+    let maskRPosX = c.width;
+    let maskLPosX = -28;
+    let ticketPosY = 60;
+
+    // Función de animación
+    function animate() {
+        // Limpia el canvas en cada fotograma para evitar arrastre
+        ctx.clearRect(0, 0, c.width, c.height);
+
+        // Dibuja las imágenes con las animaciones
+        ctx.drawImage(MASK_R, maskRPosX, 10, 40, 40);
+        ctx.drawImage(MASK_L, maskLPosX, 3, 40, 40);
+
+        // Actualiza las posiciones para las animaciones
+        if (maskRPosX > 25) {
+            maskRPosX -= 3; // Puedes ajustar la velocidad de la animación cambiando este valor
+        }
+
+        if (maskLPosX < 3) {
+            maskLPosX += 2; // Puedes ajustar la velocidad de la animación cambiando este valor
+        }
+
+        if (ticketPosY > 32) {
+            ticketPosY -= 2; // Puedes ajustar la velocidad de la animación cambiando este valor
+        }
+
+        // Dibuja el ticket después de que las máscaras hayan comenzado a aparecer
+        ctx.drawImage(TICKET, 15, ticketPosY, 30, 19);
+
+        // Solicita el próximo fotograma de animación
+        requestAnimationFrame(animate);
+    }
+
+    // Inicia la animación
+    animate();
+</script>
+
+
+    
+    
+</body>
+
+</html>

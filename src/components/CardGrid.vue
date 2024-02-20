@@ -1,7 +1,6 @@
 <script setup lang="ts">
 defineProps<{
   title?: string
-  description?: string
   imageSrc?: string
   diaObra?: string
   obraId: number
@@ -13,7 +12,7 @@ defineProps<{
   <RouterLink :to="'/function/' + obraId">
     <article class="card">
       <div class="imgContainer">
-        <img :src="'../assets/IMAGENES/' + imageSrc" alt="title">
+        <img :src="'src/assets/IMAGENES/' + imageSrc" alt="title">
       </div>
       <div class="card__description">
         <h2>{{ title }}</h2>

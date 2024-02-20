@@ -2267,8 +2267,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "d:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj": {
-              "projectPath": "d:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj"
+            "D:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj": {
+              "projectPath": "D:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj"
             }
           }
         }

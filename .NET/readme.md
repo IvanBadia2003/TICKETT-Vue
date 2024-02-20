@@ -15,6 +15,6 @@ docker commit & docker push
 
 ## Migration
 `dotnet tool install --global dotnet-ef --version 6.*`
-`dotnet ef migrations add InitialCreate -p ./Data/PizzaExample.Data.csproj -s ./API/PizzaExample.API.csproj`
-`dotnet ef database update  -p ./Data/PizzaExample.Data.csproj -s ./API/PizzaExample.API.csproj`
-`dotnet ef database drop  -p ./Data/PizzaExample.Data.csproj -s ./API/PizzaExample.API.csproj`
+`dotnet ef migrations add InitialCreate -p ./Data/Tickett.Data.csproj -s ./API/Tickett.API.csproj`
+`dotnet ef database update  -p ./Data/Tickett.Data.csproj -s ./API/Tickett.API.csproj`
+`dotnet ef database drop  -p ./Data/Tickett.Data.csproj -s ./API/Tickett.API.csproj`

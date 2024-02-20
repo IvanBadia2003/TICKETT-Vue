@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,8 +39,8 @@
               "D:\\TICKETT-Vue\\.NET\\Data\\Tickett.Data.csproj": {
                 "projectPath": "D:\\TICKETT-Vue\\.NET\\Data\\Tickett.Data.csproj"
               },
-              "d:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj": {
-                "projectPath": "d:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj"
+              "D:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj": {
+                "projectPath": "D:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj"
               }
             }
           }
@@ -77,6 +78,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -176,8 +180,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "d:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj": {
-                "projectPath": "d:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj"
+              "D:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj": {
+                "projectPath": "D:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj"
               }
             }
           }
@@ -227,14 +231,14 @@
         }
       }
     },
-    "d:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj": {
+    "D:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj",
+        "projectUniqueName": "D:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj",
         "projectName": "Tickett.Models",
-        "projectPath": "d:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj",
+        "projectPath": "D:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj",
         "packagesPath": "C:\\Users\\S2-PC00\\.nuget\\packages\\",
-        "outputPath": "d:\\TICKETT-Vue\\.NET\\Models\\obj\\",
+        "outputPath": "D:\\TICKETT-Vue\\.NET\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

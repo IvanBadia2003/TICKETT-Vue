@@ -3,7 +3,7 @@ using Tickett.Business;
 using Microsoft.AspNetCore.Mvc;
 
 
-namespace PizzaExample.Controllers;
+namespace Tickett.Controllers;
 
 [ApiController]
 [Route("[controller]")]

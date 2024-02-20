@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj": {}
+    "D:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj": {}
   },
   "projects": {
-    "d:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj": {
+    "D:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj",
+        "projectUniqueName": "D:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj",
         "projectName": "Tickett.Models",
-        "projectPath": "d:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj",
+        "projectPath": "D:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj",
         "packagesPath": "C:\\Users\\S2-PC00\\.nuget\\packages\\",
-        "outputPath": "d:\\TICKETT-Vue\\.NET\\Models\\obj\\",
+        "outputPath": "D:\\TICKETT-Vue\\.NET\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

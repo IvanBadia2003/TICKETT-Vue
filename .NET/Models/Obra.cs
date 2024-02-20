@@ -30,7 +30,7 @@ public class Obra
 
     public Obra() { }
 
-    public Obra(string titulo, string descripcion, DateTime diaObra, TimeSpan horaObra, string imagen, string genero, int duracion, int precio, List<Butaca> listaButacas)
+    public Obra(string titulo, string descripcion, DateTime diaObra, TimeSpan horaObra, string imagen, string genero, int duracion, int precio)
     {
         Titulo = titulo;
         Descripcion = descripcion;
@@ -40,12 +40,22 @@ public class Obra
         Genero = genero;
         Duracion = duracion;
         Precio = precio;
-        ListaButacas = listaButacas;
+        ListaButacas = GenerarButacas();
         ObraId = obraSeed;
         obraSeed++;
 
 
     }
+
+    private List<Butaca> GenerarButacas()
+        {
+            var butacas = new List<Butaca>();
+            for (int i = 1; i <= 100; i++)
+            {
+                butacas.Add(new Butaca(true)); // Suponiendo que inicialmente todas las butacas están libres
+            }
+            return butacas;
+        }
 
     
 

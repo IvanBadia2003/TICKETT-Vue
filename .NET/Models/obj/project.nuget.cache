@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G5asQQI7j9nS5ZH9HiBdsAII0DShhIOYnu9BPlSOlhvqZjJKtm5GUScCB5BS2mA9ApBPY4+P0Y5KCZ4dBjgvOQ==",
+  "dgSpecHash": "Fh0qi/VrKr5bBi265s2kDfLijSridzTc8RnXOJrhWinZs6F5/7eW2KUbZdeEYrdgA7TFrh3eUUX2PZXFUclCYQ==",
   "success": true,
-  "projectFilePath": "D:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj",
+  "projectFilePath": "d:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

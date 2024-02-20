@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tickett.Models", "Models\Tickett.Models.csproj", "{873195BC-A386-4025-AFE6-290D440195A2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tickett.Data", "Data\Tickett.Data.csproj", "{024408D6-ED8B-4456-972D-23A1109A6D5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tickett.Data", "Data\Tickett.Data.csproj", "{93FF8ADB-9C92-40D2-9A8E-0D174120A3E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tickett.Models", "Models\Tickett.Models.csproj", "{A988FA9E-F25E-4B57-B222-3D2BBF9C95B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tickett.Business", "Business\Tickett.Business.csproj", "{8EE893A2-ACCC-4228-9567-B52835560FC4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tickett.Business", "Business\Tickett.Business.csproj", "{0A1AD83E-9F05-480E-BDE4-289FF3B33D72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tickett.API", "API\Tickett.API.csproj", "{7A89DB83-85C5-46FD-A31D-AAE8BADB11DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tickett.API", "API\Tickett.API.csproj", "{B7626570-06F8-4C63-A2EC-A9D8FF4AE1BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,21 +20,21 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{873195BC-A386-4025-AFE6-290D440195A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{873195BC-A386-4025-AFE6-290D440195A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{873195BC-A386-4025-AFE6-290D440195A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{873195BC-A386-4025-AFE6-290D440195A2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{93FF8ADB-9C92-40D2-9A8E-0D174120A3E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{93FF8ADB-9C92-40D2-9A8E-0D174120A3E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{93FF8ADB-9C92-40D2-9A8E-0D174120A3E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{93FF8ADB-9C92-40D2-9A8E-0D174120A3E4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8EE893A2-ACCC-4228-9567-B52835560FC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8EE893A2-ACCC-4228-9567-B52835560FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8EE893A2-ACCC-4228-9567-B52835560FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8EE893A2-ACCC-4228-9567-B52835560FC4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7A89DB83-85C5-46FD-A31D-AAE8BADB11DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A89DB83-85C5-46FD-A31D-AAE8BADB11DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A89DB83-85C5-46FD-A31D-AAE8BADB11DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A89DB83-85C5-46FD-A31D-AAE8BADB11DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{024408D6-ED8B-4456-972D-23A1109A6D5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{024408D6-ED8B-4456-972D-23A1109A6D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{024408D6-ED8B-4456-972D-23A1109A6D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{024408D6-ED8B-4456-972D-23A1109A6D5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A988FA9E-F25E-4B57-B222-3D2BBF9C95B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A988FA9E-F25E-4B57-B222-3D2BBF9C95B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A988FA9E-F25E-4B57-B222-3D2BBF9C95B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A988FA9E-F25E-4B57-B222-3D2BBF9C95B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A1AD83E-9F05-480E-BDE4-289FF3B33D72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A1AD83E-9F05-480E-BDE4-289FF3B33D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A1AD83E-9F05-480E-BDE4-289FF3B33D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A1AD83E-9F05-480E-BDE4-289FF3B33D72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7626570-06F8-4C63-A2EC-A9D8FF4AE1BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7626570-06F8-4C63-A2EC-A9D8FF4AE1BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7626570-06F8-4C63-A2EC-A9D8FF4AE1BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7626570-06F8-4C63-A2EC-A9D8FF4AE1BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

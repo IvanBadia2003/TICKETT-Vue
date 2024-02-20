@@ -2,6 +2,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Business\Tickett.Business.csproj" />
+    <ProjectReference Include="..\Models\Tickett.Models.csproj" />
+    <ProjectReference Include="..\Data\Tickett.Data.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
@@ -9,5 +11,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
 
 </Project>

@@ -1,19 +1,52 @@
-﻿namespace Tickett.Models;
- using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Tickett.Models;
+using System.Text;
 public class Obra
 {
-    public int ID;
-    public string titulo;
-    public string descripcion;
-    public DateTime diaObra;
+    [Key]
+    public int ObraId { get; set; }
+    [Required]
+    public string Titulo { get; set; }
+    [Required]
+    public string Descripcion { get; set; }
+    [Required]
+    public DateTime DiaObra { get; set; }
+    [Required]
+    public TimeSpan HoraObra { get; set; }
+    [Required]
+    public string Imagen { get; set; }
+    public List<ObraReparto> ListaObraReparto { get; set; }
+    [Required]
+    public string Genero { get; set; }
+    [Required]
+    public int Duracion { get; set; }
+    [Required]
+    public int Precio { get; set; }
+    [Required]
+    public List<Butaca> ListaButacas { get; set; }
 
-    public DateTime horaObra;
+    public static int obraSeed = 1;
 
-    public string imagen;
-    public reparto;
-    public string genero;
-    public int duracion;
-    public int precio;
-    public butacas;
+    public Obra() { }
+
+    public Obra(string titulo, string descripcion, DateTime diaObra, TimeSpan horaObra, string imagen, string genero, int duracion, int precio, List<Butaca> listaButacas)
+    {
+        Titulo = titulo;
+        Descripcion = descripcion;
+        DiaObra = diaObra;
+        HoraObra = horaObra;
+        Imagen = imagen;
+        Genero = genero;
+        Duracion = duracion;
+        Precio = precio;
+        ListaButacas = listaButacas;
+        ObraId = obraSeed;
+        obraSeed++;
+
+
+    }
+
+    
 
 }

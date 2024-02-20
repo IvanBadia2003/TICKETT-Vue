@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Models\Tickett.Models.csproj" />
+    <ProjectReference Include="..\Data\Tickett.Data.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

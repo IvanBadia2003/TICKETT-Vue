@@ -7,9 +7,17 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 
 
-
+var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy  =>
+                      {
+                          policy.WithOrigins("http://localhost:5173");
+                      });
+});
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -43,6 +51,9 @@ var app = builder.Build();
 
     app.UseSwagger();
     app.UseSwaggerUI();
+
+app.UseCors(MyAllowSpecificOrigins);
+
 
 app.UseAuthorization();
 app.MapControllers();

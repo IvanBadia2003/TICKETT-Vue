@@ -22,7 +22,7 @@ public class ObraController : ControllerBase
 
 
     [HttpGet]
-    [Route("id")]
+    [Route("{id}")]
     public ActionResult<Obra> Get(int id)
     {
         var obra = _obraService.Get(id);

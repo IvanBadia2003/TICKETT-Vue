@@ -24,7 +24,7 @@ public class Obra
     [Required]
     public int Precio { get; set; }
     [Required]
-    public List<Butaca> ListaButacas { get; set; }
+    public List<Sesion> ListaSesion { get; set; }
 
     public static int obraSeed = 1;
 
@@ -40,22 +40,21 @@ public class Obra
         Genero = genero;
         Duracion = duracion;
         Precio = precio;
-        ListaButacas = GenerarButacas();
         ObraId = obraSeed;
         obraSeed++;
 
 
     }
 
-    private List<Butaca> GenerarButacas()
-        {
-            var butacas = new List<Butaca>();
-            for (int i = 1; i <= 100; i++)
-            {
-                butacas.Add(new Butaca(true)); // Suponiendo que inicialmente todas las butacas están libres
-            }
-            return butacas;
-        }
+    // private List<Butaca> GenerarButacas()
+    //     {
+    //         var butacas = new List<Butaca>();
+    //         for (int i = 1; i <= 100; i++)
+    //         {
+    //             butacas.Add(new Butaca(true)); // Suponiendo que inicialmente todas las butacas están libres
+    //         }
+    //         return butacas;
+    //     }
 
     
 

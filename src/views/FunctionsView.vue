@@ -2,33 +2,29 @@
 
 import CardGrid from '../components/CardGrid.vue';
 
-
-import * as obras from '../assets/server/server'; // Asegúrate de proporcionar la ruta correcta
-
-
-
 import { ref, onMounted } from 'vue';
+import axios from 'axios';
 
+interface Obra {
+  obraId: number;
+  titulo: string;
+  diaObra: string;
+  imagen: string;
+  genero: string;
+  // Agrega otras propiedades según la estructura real de tus objetos
+}
 
+const datosApi = ref<Array<Obra>>([]);
 
-const datosApi = ref([]);
-
-onMounted(() => {
-  fetch('http://localhost:5000/Obra')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Error de red: ${response.status} - ${response.statusText}`);
-      }
-      return response.json();
-    })
-    .then((data) => {
-      datosApi.value = data;
-    })
-    .catch((error: Error) => {
-      console.error('Error al hacer la petición:', error.message);
-    });
+onMounted(async () => {
+  try {
+    const response = await axios.get('http://localhost:5000/Obra');
+    console.log("Fetch hecho");
+    datosApi.value = response.data;
+  } catch (error) {
+    console.error('Error al hacer la petición:', error);
+  }
 });
-
 
 </script>
 
@@ -36,8 +32,8 @@ onMounted(() => {
     <div class="content">
         <section class="functions">
 
-            <CardGrid v-for="obra in datosApi" :obraId="obra.id" :title="obra.titulo" 
-                :dia-obra="obra.diaObra" :image-src="obra.imagenObra" />
+            <CardGrid v-for="obra in datosApi" :obraId="obra.obraId" :title="obra.titulo" 
+                :dia-obra="obra.diaObra" :imageSrc="obra.imagen" :genero="obra.genero" />
         </section>
 
 

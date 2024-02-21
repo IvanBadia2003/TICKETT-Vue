@@ -7,11 +7,11 @@ public class ObraReparto
 {
     [ForeignKey("Obra")]
     public int ObraId { get; set; }
-    [Required]
+    // [Required]
     public Obra Obra { get; set; }
     [ForeignKey("Reparto")]
     public int RepartoId { get; set; }
-    [Required]
+    // [Required]
     public Reparto Reparto { get; set; }
     public ObraReparto() { }
 

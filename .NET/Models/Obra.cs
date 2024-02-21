@@ -6,24 +6,24 @@ public class Obra
 {
     [Key]
     public int ObraId { get; set; }
-    [Required]
+    // [Required]
     public string Titulo { get; set; }
-    [Required]
+    // [Required]
     public string Descripcion { get; set; }
-    [Required]
+    // [Required]
     public DateTime DiaObra { get; set; }
-    [Required]
+    // [Required]
     public TimeSpan HoraObra { get; set; }
-    [Required]
+    // [Required]
     public string Imagen { get; set; }
     public List<ObraReparto> ListaObraReparto { get; set; }
-    [Required]
+    // [Required]
     public string Genero { get; set; }
-    [Required]
+    // [Required]
     public int Duracion { get; set; }
-    [Required]
+    // [Required]
     public int Precio { get; set; }
-    [Required]
+    // [Required]
     public List<Butaca> ListaButacas { get; set; }
 
     public static int obraSeed = 1;

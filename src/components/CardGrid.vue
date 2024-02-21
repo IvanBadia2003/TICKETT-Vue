@@ -4,6 +4,7 @@ defineProps<{
   imageSrc?: string
   diaObra?: string
   obraId: number
+  genero: string
   }>()
  
 </script>
@@ -17,6 +18,7 @@ defineProps<{
       <div class="card__description">
         <h2>{{ title }}</h2>
         <h3>{{ obraId }}</h3>
+        <h3>{{ genero }}</h3>
       </div>
     </article>
   </RouterLink>

@@ -6,7 +6,7 @@ public class Butaca
 {
     [Key]
     public int ButacaId { get; set; }
-    [Required]
+    // [Required]
     public bool Libre { get; set; }
     public int ObraId { get; set; }
     public Obra Obra { get; set; }

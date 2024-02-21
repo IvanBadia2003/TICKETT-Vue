@@ -6,13 +6,37 @@ import CardGrid from '../components/CardGrid.vue';
 import * as obras from '../assets/server/server'; // Asegúrate de proporcionar la ruta correcta
 
 
+
+import { ref, onMounted } from 'vue';
+
+
+
+const datosApi = ref([]);
+
+onMounted(() => {
+  fetch('http://localhost:5000/Obra')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Error de red: ${response.status} - ${response.statusText}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      datosApi.value = data;
+    })
+    .catch((error: Error) => {
+      console.error('Error al hacer la petición:', error.message);
+    });
+});
+
+
 </script>
 
 <template>
     <div class="content">
         <section class="functions">
 
-            <CardGrid v-for="obra in obras" :obraId="obra.id" :title="obra.titulo" 
+            <CardGrid v-for="obra in datosApi" :obraId="obra.id" :title="obra.titulo" 
                 :dia-obra="obra.diaObra" :image-src="obra.imagenObra" />
         </section>
 

@@ -24,13 +24,13 @@ public class Obra
     [Required]
     public int Precio { get; set; }
     [Required]
-    public List<Sesion> ListaSesion { get; set; }
+    public ICollection<Butaca> ListaButaca { get; set; }
 
     public static int obraSeed = 1;
 
     public Obra() { }
 
-    public Obra(string titulo, string descripcion, DateTime diaObra, TimeSpan horaObra, string imagen, string genero, int duracion, int precio)
+    public Obra(string titulo, string descripcion, DateTime diaObra, TimeSpan horaObra, string imagen, string genero, int duracion, int precio, List<Butaca>listaButaca)
     {
         Titulo = titulo;
         Descripcion = descripcion;
@@ -40,6 +40,7 @@ public class Obra
         Genero = genero;
         Duracion = duracion;
         Precio = precio;
+        ListaButaca = listaButaca;
         ObraId = obraSeed;
         obraSeed++;
 

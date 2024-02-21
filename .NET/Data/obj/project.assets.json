@@ -2242,11 +2242,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TICKETT-Vue\\.NET\\Data\\Tickett.Data.csproj",
+      "projectUniqueName": "d:\\TICKETT-Vue\\.NET\\Data\\Tickett.Data.csproj",
       "projectName": "Tickett.Data",
-      "projectPath": "D:\\TICKETT-Vue\\.NET\\Data\\Tickett.Data.csproj",
+      "projectPath": "d:\\TICKETT-Vue\\.NET\\Data\\Tickett.Data.csproj",
       "packagesPath": "C:\\Users\\S2-PC00\\.nuget\\packages\\",
-      "outputPath": "D:\\TICKETT-Vue\\.NET\\Data\\obj\\",
+      "outputPath": "d:\\TICKETT-Vue\\.NET\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

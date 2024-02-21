@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj",
+      "projectUniqueName": "d:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj",
       "projectName": "Tickett.Models",
-      "projectPath": "D:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj",
+      "projectPath": "d:\\TICKETT-Vue\\.NET\\Models\\Tickett.Models.csproj",
       "packagesPath": "C:\\Users\\S2-PC00\\.nuget\\packages\\",
-      "outputPath": "D:\\TICKETT-Vue\\.NET\\Models\\obj\\",
+      "outputPath": "d:\\TICKETT-Vue\\.NET\\Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tickett.Data;
 
@@ -11,9 +12,10 @@ using Tickett.Data;
 namespace Tickett.Data.Migrations
 {
     [DbContext(typeof(ObraContext))]
-    partial class ObraContextModelSnapshot : ModelSnapshot
+    [Migration("20240222152845_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,9 +38,14 @@ namespace Tickett.Data.Migrations
                     b.Property<int>("ObraId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("SesionId")
+                        .HasColumnType("int");
+
                     b.HasKey("ButacaId");
 
                     b.HasIndex("ObraId");
+
+                    b.HasIndex("SesionId");
 
                     b.ToTable("Butacas");
                 });
@@ -1326,13 +1333,50 @@ namespace Tickett.Data.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Tickett.Models.Sesion", b =>
+                {
+                    b.Property<int>("SesionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SesionId"), 1L, 1);
+
+                    b.Property<DateTime>("DiaObra")
+                        .HasColumnType("datetime2");
+
+                    b.Property<TimeSpan>("HoraObra")
+                        .HasColumnType("time");
+
+                    b.Property<int>("ObraId")
+                        .HasColumnType("int");
+
+                    b.HasKey("SesionId");
+
+                    b.HasIndex("ObraId");
+
+                    b.ToTable("Sesiones");
+
+                    b.HasData(
+                        new
+                        {
+                            SesionId = 1,
+                            DiaObra = new DateTime(2024, 1, 13, 17, 0, 0, 0, DateTimeKind.Unspecified),
+                            HoraObra = new TimeSpan(0, 0, 0, 0, 0),
+                            ObraId = 1
+                        });
+                });
+
             modelBuilder.Entity("Tickett.Models.Butaca", b =>
                 {
                     b.HasOne("Tickett.Models.Obra", "Obra")
-                        .WithMany("ListaButaca")
+                        .WithMany()
                         .HasForeignKey("ObraId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("Tickett.Models.Sesion", null)
+                        .WithMany("ListaButacas")
+                        .HasForeignKey("SesionId");
 
                     b.Navigation("Obra");
                 });
@@ -1356,16 +1400,30 @@ namespace Tickett.Data.Migrations
                     b.Navigation("Reparto");
                 });
 
+            modelBuilder.Entity("Tickett.Models.Sesion", b =>
+                {
+                    b.HasOne("Tickett.Models.Obra", "Obra")
+                        .WithMany()
+                        .HasForeignKey("ObraId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Obra");
+                });
+
             modelBuilder.Entity("Tickett.Models.Obra", b =>
                 {
-                    b.Navigation("ListaButaca");
-
                     b.Navigation("ListaObraReparto");
                 });
 
             modelBuilder.Entity("Tickett.Models.Reparto", b =>
                 {
                     b.Navigation("ListaObraReparto");
+                });
+
+            modelBuilder.Entity("Tickett.Models.Sesion", b =>
+                {
+                    b.Navigation("ListaButacas");
                 });
 #pragma warning restore 612, 618
         }

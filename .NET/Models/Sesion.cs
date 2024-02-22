@@ -13,18 +13,19 @@ public class Sesion
     public DateTime DiaObra { get; set; }
     [Required]
     public TimeSpan HoraObra { get; set; }
-    public List<Butaca> ListaButacas { get; set; }
+    // public List<Butaca> ListaButacas { get; set; }
 
     public static int sesionSeed = 1;
 
     public Sesion() { }
 
-    public Sesion(int obraId, DateTime diaObra, TimeSpan horaObra )
+    public Sesion(int obraId, DateTime diaObra)
     {
         ObraId = obraId;
         DiaObra = diaObra;
-        HoraObra = horaObra;
         SesionId = sesionSeed;
         sesionSeed++;
     }
+
+    
 }

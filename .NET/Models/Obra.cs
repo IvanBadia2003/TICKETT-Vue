@@ -24,13 +24,13 @@ public class Obra
     [Required]
     public int Precio { get; set; }
     [Required]
-    public ICollection<Butaca> ListaButaca { get; set; }
+    public List<Butaca> ListaButaca { get; set; }
 
     public static int obraSeed = 1;
 
     public Obra() { }
 
-    public Obra(string titulo, string descripcion, DateTime diaObra, TimeSpan horaObra, string imagen, string genero, int duracion, int precio, List<Butaca>listaButaca)
+    public Obra(string titulo, string descripcion, DateTime diaObra, TimeSpan horaObra, string imagen, string genero, int duracion, int precio)
     {
         Titulo = titulo;
         Descripcion = descripcion;
@@ -40,23 +40,9 @@ public class Obra
         Genero = genero;
         Duracion = duracion;
         Precio = precio;
-        ListaButaca = listaButaca;
         ObraId = obraSeed;
         obraSeed++;
 
 
     }
-
-    // private List<Butaca> GenerarButacas()
-    //     {
-    //         var butacas = new List<Butaca>();
-    //         for (int i = 1; i <= 100; i++)
-    //         {
-    //             butacas.Add(new Butaca(true)); // Suponiendo que inicialmente todas las butacas están libres
-    //         }
-    //         return butacas;
-    //     }
-
-    
-
 }

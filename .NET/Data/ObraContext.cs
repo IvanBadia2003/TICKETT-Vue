@@ -1,30 +1,24 @@
 using Microsoft.EntityFrameworkCore;
-using Tickett.Models;
 using Microsoft.Extensions.Configuration;
+using Tickett.Models;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Tickett.Data
 {
     public class ObraContext : DbContext
     {
+        public readonly Butaca butaca = new Butaca();
 
         public ObraContext(DbContextOptions<ObraContext> options)
             : base(options)
         {
 
         }
-        List<Butaca> GenerarButacas(int oId)
-        {
-            var i = 0;
-            var butacas = new List<Butaca>();
-            for (i = 1; i <= 100; i++)
-            {
-                butacas.Add(new Butaca(butacaId: i, libre: true, obraId: oId)); // Suponiendo que inicialmente todas las butacas están libres
-            }
-            return butacas;
-        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Obra>().HasKey(o => o.ObraId);
+
             modelBuilder.Entity<ObraReparto>()
                 .HasKey(o => new { o.ObraId, o.RepartoId });
 
@@ -38,21 +32,6 @@ namespace Tickett.Data
                 .WithMany(i => i.ListaObraReparto)
                 .HasForeignKey(pi => pi.RepartoId);
 
-            // modelBuilder.Entity<Obra>()
-            // .HasMany(o => o.ListaButaca)
-            // .WithOne(b => b.Obra)
-            // .HasForeignKey(b => b.ObraId);
-
-            // modelBuilder.Entity<Sesion>()
-            // .HasMany(o => o.ListaButacas)
-            // .WithOne(b => b.Sesion)
-            // .HasForeignKey(b => b.SesionId);
-
-            // var butacas = new List<Butaca>();
-            // for (int i = 1; i <= 100; i++)
-            // {
-            //     butacas.Add(new Butaca(butacaId: i,libre: true)); // Suponiendo que inicialmente todas las butacas están libres
-            // }
 
             modelBuilder.Entity<Obra>().HasData(
                 new Obra { ObraId = 1, Titulo = "Don Juan", Descripcion = "false", DiaObra = new DateTime(2024, 01, 13), HoraObra = new TimeSpan(17, 0, 0), Imagen = "donjuan.jpg", Genero = "Drama", Duracion = 105, Precio = 25 },
@@ -69,20 +48,22 @@ namespace Tickett.Data
                 new Obra { ObraId = 12, Titulo = "Las mil y una noches", Descripcion = "false", DiaObra = new DateTime(2024, 05, 01), HoraObra = new TimeSpan(19, 15, 0), Imagen = "las-mil-y-una-noches.jpg", Genero = "Drama", Duracion = 30, Precio = 25 }
 
             );
+
             modelBuilder.Entity<Butaca>().HasData(
-                GenerarButacas(1),
-                GenerarButacas(2),
-                GenerarButacas(3),
-                GenerarButacas(4),
-                GenerarButacas(5),
-                GenerarButacas(6),
-                GenerarButacas(7),
-                GenerarButacas(8),
-                GenerarButacas(9),
-                GenerarButacas(10),
-                GenerarButacas(11),
-                GenerarButacas(12)
+                butaca.GenerarButacas(1),
+                butaca.GenerarButacas(2),
+                butaca.GenerarButacas(3),
+                butaca.GenerarButacas(4),
+                butaca.GenerarButacas(5),
+                butaca.GenerarButacas(6),
+                butaca.GenerarButacas(7),
+                butaca.GenerarButacas(8),
+                butaca.GenerarButacas(9),
+                butaca.GenerarButacas(10),
+                butaca.GenerarButacas(11),
+                butaca.GenerarButacas(12)
             );
+
             modelBuilder.Entity<Reparto>().HasData(
                 new Reparto { RepartoId = 1, Nombre = "Luisa Fernández", Rol = "Doña Ana" },
                 new Reparto { RepartoId = 2, Nombre = "Andrés Sánchez", Rol = "Don Juan" },
@@ -283,15 +264,6 @@ namespace Tickett.Data
            );
 
         }
-        // private List<Butaca> GenerarButacas()
-        // {
-        //     var butacas = new List<Butaca>();
-        //     for (int i = 1; i <= 100; i++)
-        //     {
-        //         butacas.Add(new Butaca(true)); // Suponiendo que inicialmente todas las butacas están libres
-        //     }
-        //     return butacas;
-        // }
 
         public DbSet<Obra> Obras { get; set; }
         public DbSet<Butaca> Butacas { get; set; }

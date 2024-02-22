@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router"
-import AboutView from "../views/AboutView.vue"
 import HomeView from "../views/HomeView.vue"
 import FunctionsView from "../views/FunctionsView.vue"
 import FunctionDescriptionView from "../views/FunctionDescriptionView.vue"
@@ -13,18 +12,13 @@ const router = createRouter({
             component: HomeView
         },
         {
-            path: '/about',
-            name: 'about',
-            component: AboutView
-        },
-        {
-            path: '/functions',
-            name: 'functions',
+            path: '/Obras',
+            name: 'obras',
             component: FunctionsView
         },
         {
-            path: '/function/:id',
-            name: 'function',
+            path: '/Obra/:id',
+            name: 'obra',
             component: FunctionDescriptionView,
             props: true,
         }

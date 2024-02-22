@@ -1,3 +1,0 @@
-<template>
-    Vista AboutView
-</template>

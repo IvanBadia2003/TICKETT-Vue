@@ -20,7 +20,7 @@ defineProps<{
       <h3>{{ obraId }}</h3>
       
     </div>
-    <RouterLink :to="'/function/' + obraId">
+    <RouterLink :to="'/Obra/' + obraId">
       <button class="cardFunction__button">VER MÁS</button>
     </RouterLink>
     </article>

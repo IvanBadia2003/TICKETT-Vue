@@ -19,7 +19,7 @@ import Carousel from '@/components/Carousel.vue';
       <h2>PRÓXIMAS FUNCIONES</h2>
     </div>
     <div class="articlesFunction">
-      <CardComingSoon title="Diego" imageSrc="campeones.jpg" dia-obra="15/4/44" :obraId="1" />
+      <CardComingSoon title="Diego" imageSrc="campeones.jpg" dia-obra="15/4/44" :obraId="4" />
       <CardComingSoon title="Diego" imageSrc="donjuan.jpg" dia-obra="15/4/44" :obraId="1" />
     </div>
   </section>

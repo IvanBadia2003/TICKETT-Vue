@@ -14,10 +14,9 @@ import IconHamburguer from './icons/IconHamburguer.vue'
     <div class="navegation mostrando" id="navegation">
       <ul>
         <RouterLink to="/"><li><a>INICIO</a></li></RouterLink>
-        <RouterLink to="/functions"><li><a>FUNCIONES</a></li></RouterLink>
+        <RouterLink to="/Obras"><li><a>FUNCIONES</a></li></RouterLink>
         <li><a href="#">INFORMACION</a></li>
         <li><a href="#">CONTACTO</a></li>
-        <RouterLink to="/about">About</RouterLink>
       </ul>
     </div>
     <div class="icons">

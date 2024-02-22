@@ -10,7 +10,7 @@ defineProps<{
 </script>
 
 <template>
-  <RouterLink :to="'/function/' + obraId">
+  <RouterLink :to="'/Obra/' + obraId">
     <article class="card">
       <div class="imgContainer">
         <img :src="'src/assets/IMAGENES/' + imageSrc" alt="title">
